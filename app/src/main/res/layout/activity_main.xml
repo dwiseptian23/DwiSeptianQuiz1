@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-16dp"
+    tools:layout_editor_absoluteY="135dp">
+
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:inputType="text"
+        android:text="Dwi Septian"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="11dp"
+        android:text="Tipe Pelanggan"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30px"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="11dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/kode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/Gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold" />
+
+        <RadioButton
+            android:id="@+id/Silver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silver" />
+
+        <RadioButton
+            android:id="@+id/Biasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biasa" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/kode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="Kode Barang"
+        android:inputType="text"
+        android:text="AAE"
+        app:layout_constraintBottom_toTopOf="@+id/jumlah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/jumlah"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint="2"
+        android:inputType="number"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/proses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kode" />
+
+    <Button
+        android:id="@+id/proses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="326dp"
+        android:onClick="Hitung"
+        android:text="Proses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/jumlah"
+        app:layout_constraintStart_toStartOf="@+id/jumlah"
+        app:layout_constraintTop_toBottomOf="@+id/jumlah" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
